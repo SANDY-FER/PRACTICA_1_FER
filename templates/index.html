@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #2c3e50, #34495e);
+            color: #ecf0f1;
+            text-align: center;
+            margin: 0;
+            height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente el contenido */
+        }
+        header {
+            background-color: #2980b9;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        .btn-container {
+            display: flex; /* Usamos flexbox para alinear los botones en horizontal */
+            justify-content: center; /* Centra horizontalmente los botones */
+            flex-wrap: wrap; /* Permite que los botones se envuelvan si no caben */
+        }
+        .btn {
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #16a085;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1abc9c;
+            transform: translateY(-3px);
+        }
+        footer {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Fernández Digital Studio</h1>
+    </header>
+    <div class="container">
+        <h2>Explora Nuestros Servicios y Conocimientos</h2>
+        <div class="btn-container">
+            <a href="/servicios" class="btn">Servicios</a>
+            <a href="/contactos" class="btn">Contactos</a>
+            <a href="ubicacion" class="btn">Ubicación</a>
+            <a href="/formulario" class="btn">Formulario</a>
+            <a href="/habilidades" class="btn">Habilidades</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Página de Programación. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

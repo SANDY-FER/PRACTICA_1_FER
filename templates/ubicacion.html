@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Puente Vela, El Alto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #2c3e50, #34495e);
+            color: #ecf0f1;
+            text-align: center;
+            margin: 0;
+            height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente el contenido */
+        }
+        header {
+            background-color: #2980b9;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            margin: 30px auto;
+            max-width: 800px;
+            padding: 20px;
+            display: flex; /* Usamos flexbox para disposición horizontal */
+            justify-content: space-between; /* Espacia los elementos */
+            align-items: flex-start; /* Alinea los elementos al principio */
+        }
+        .map {
+            width: 60%; /* Ancho del mapa */
+            height: 400px; /* Altura del mapa */
+            border: 2px solid #2c3e50; /* Borde del mapa */
+        }
+        .info {
+            width: 35%; /* Ancho del bloque de información */
+            margin-right: 20px; /* Espacio entre el texto y el mapa */
+            font-size: 1.2em;
+            color: #ecf0f1;
+            background-color: #34495e;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+        footer {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nuestra Ubicación</h1>
+    </header>
+    <div class="container">
+        <div class="info">
+            <h3>Dirección:</h3>
+            <p>Calle Principal, Zona Puente Vela</p>
+            <p>El Alto, Bolivia</p>
+            <p>Coordenadas: -16.5007, -68.1193</p>
+        </div>
+        <div class="map" id="map"></div>
+    </div>
+
+    
+    <script>
+        function initMap() {
+            // Coordenadas de Puente Vela, El Alto
+            var location = {lat: -16.5007, lng: -68.1193};
+
+            // Crear el mapa centrado en las coordenadas
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+
+            // Añadir un marcador en la ubicación
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Puente Vela, El Alto'
+            });
+        }
+    </script>
+
+    <!-- API de Google Maps -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap">
+    </script>
+</body>
+</html>
